@@ -13,6 +13,7 @@ export default function Quiz() {
   /** Prev button event handler*/
   function onPrev(){
     console.log('On onPrev click')
+    //hello
   }
 
   return (
