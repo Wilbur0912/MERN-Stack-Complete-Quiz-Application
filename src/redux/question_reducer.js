@@ -18,6 +18,6 @@ export const questionsReducer = createSlice({
     }
 })
 
-export const {startExamAction} = questReducer.actions
+export const {startExamAction} = questionsReducer.actions
 
 export default questionsReducer.reducer;
