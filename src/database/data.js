@@ -10,7 +10,7 @@ export default [
     },
     {
         id: 2,
-        question : "Following methods can be used to display data in some form using Javascript",
+        question : "following methods can be used to display data in some form using Javascript",
         options : [
             'document.write()',
             'console.log()',
