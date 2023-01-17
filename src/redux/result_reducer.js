@@ -13,6 +13,6 @@ export const resultReducer = createSlice({
     }
 })
 
-export const {setUserId} = resaultReducer.actions;
+export const {setUserId} = resultReducer.actions;
 
 export default resultReducer.reducer
