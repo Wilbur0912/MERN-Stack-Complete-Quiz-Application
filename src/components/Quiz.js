@@ -2,24 +2,37 @@ import React, {useEffect} from 'react'
 
 import Questions from './Questions'
 
+import { moveNextQuestion, movePrevQuestion } from '../hooks/FetchQuestion';
+
 /** redux store import */
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+import { movePrevAction } from '../redux/question_reducer';
 export default function Quiz() {
 
-  const state = useSelector(state => state)
+  //const trace = useSelector(state => state.questions.trace);
+  const {queue, trace} = useSelector(state => state.questions);
+  const dispatch = useDispatch();
 
   useEffect(() =>{
-    console.log(state)
+    console.log(queue)
   })
   /** next button event handler*/
   function onNext(){
     console.log('On next click')
+
+    if(trace < (queue.length)){
+      dispatch(moveNextQuestion());
+    }
+    /**update the trace value by one using MoveNextAction */
   }
 
   /** Prev button event handler*/
   function onPrev(){
     console.log('On onPrev click')
-    //hello
+    if(trace > 0){
+      dispatch(movePrevQuestion())
+    }
+ 
   }
 
   return (

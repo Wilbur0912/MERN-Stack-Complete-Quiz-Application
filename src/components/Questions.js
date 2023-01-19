@@ -17,7 +17,7 @@ export default function Questions() {
     const questions = useSelector(state => state.questions.queue[state.questions.trace])
     const trace = useSelector(state => state.questions.trace)
     useEffect(() =>{
-      console.log(questions)
+      // console.log(questions)
     })
 
 
@@ -32,7 +32,7 @@ export default function Questions() {
         <div className='questions'>
             <h2 className='text-light'>{questions?.question}</h2>
 
-            <ul key={question.id}>
+            <ul key={questions?.id}>
                 {
                     questions?.options.map((q,i) => (
                     <li key={i}>
